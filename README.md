@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Gestión de Proveedores - Frontend
 
-## Getting Started
+Este proyecto es una aplicación desarrollada en Next.js que facilita la gestión de proveedores, permitiendo el cruce de datos con listas de alto riesgo para asegurar la debida diligencia. A continuación, se detallan los pasos necesarios para configurar y ejecutar la aplicación localmente.
 
-First, run the development server:
+
+## Requisitos Previos
+
+- [Node.js](https://nodejs.org/) (se recomienda v14.x o superior)
+- [npm](https://www.npmjs.com/) (se recomienda v6.x o superior)
+- [Git](https://git-scm.com/)
+
+## Configuración del Proyecto
+
+### 1. Clonar el Repositorio
+
+Clona el repositorio del proyecto en tu máquina local usando el siguiente comando:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/RLJ17/GestProveedores.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Abrir el Proyecto
+Abre el proyecto en tu editor (Visual Studio Code).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Instala las dependencias
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Abre un nuevo terminal en la raiz del proyecto y usa el siguiente comando para instalar las dependencias:
+```bash
+  npm install
+```
+### 4. Ejecutar la Aplicación
 
-## Learn More
+Para ejecutar la aplicación localmente usa el siguiente comando:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+  npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usuarios de Prueba
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+La base de datos viene preconfigurada con los siguientes usuarios de prueba para facilitar el inicio de sesión y la evaluación de la aplicación:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* **Usuario:** admin  ----> **Contraseña:** admin123
+* **Usuario:** user ----> **Contraseña:** user123
