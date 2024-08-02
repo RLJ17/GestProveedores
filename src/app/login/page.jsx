@@ -18,11 +18,11 @@ export default function login() {
       user: correo,
       password: contrasena
     };
-    const riskToken = await riskList.post("login", {
+    /*const riskToken = await riskList.post("login", {
       "username": "admin",
       "password": "password"
     })
-    console.log("risktoken",riskToken)
+    console.log("risktoken",riskToken)*/
     try {
       const response = await usuarios.post("login", User);
       console.log("Login", response)
@@ -38,46 +38,49 @@ export default function login() {
     }
   };
   return (
-    <div className="bg-slate-500 h-screen">
+    <div className="bg-slate-500 h-screen flex justify-center">
       <form onSubmit={handleSubmit}>
-        <div className="formulario absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 bg-white rounded-lg">
-          <Box
-            sx={{
-              '& .MuiTextField-root': { m: 1, width: '30ch' },
-              ml: 1,
-              mt: 3,
-              mb: 2,
-            }}
-            noValidate
-            autoComplete="off"
-          >
-            <div className="text-center pb-3 pt-3">
-              <TextField
-                id="outlined-basic"
-                label="Correo"
-                variant="outlined"
-                value={correo}
-                onChange={(e) => setCorreo(e.target.value)}
-              />
-            </div>
-            <div className="text-center pb-3">
-              <TextField
-                id="outlined-basic"
-                label="Contraseña"
-                variant="outlined"
-                type="password"
-                value={contrasena}
-                onChange={(e) => setContrasena(e.target.value)}
-              />
-            </div>
-          </Box>
-          <div className="flex justify-center pb-3">
-            <button
-              type="submit"
-              className="bg-slate-700 hover:bg-slate-800 text-white font-bold rounded-md text-xl py-1 px-2"
+        <div className='formulario absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96'>
+        <div className='text-3xl font-extrabold text-white'>Gestión de Proveedores</div>
+          <div className=" bg-white rounded-lg py-2 mt-4">
+            <Box
+              sx={{
+                '& .MuiTextField-root': { m: 1, width: '30ch' },
+                ml: 1,
+                mt: 3,
+                mb: 2,
+              }}
+              noValidate
+              autoComplete="off"
             >
-              Iniciar sesión
-            </button>
+              <div className="text-center pb-3 pt-3">
+                <TextField
+                  id="outlined-basic"
+                  label="Correo"
+                  variant="outlined"
+                  value={correo}
+                  onChange={(e) => setCorreo(e.target.value)}
+                />
+              </div>
+              <div className="text-center pb-3">
+                <TextField
+                  id="outlined-basic"
+                  label="Contraseña"
+                  variant="outlined"
+                  type="password"
+                  value={contrasena}
+                  onChange={(e) => setContrasena(e.target.value)}
+                />
+              </div>
+            </Box>
+            <div className="flex justify-center pb-3">
+              <button
+                type="submit"
+                className="bg-slate-700 hover:bg-slate-800 text-white font-bold rounded-md text-xl py-1 px-2"
+              >
+                Iniciar sesión
+              </button>
+            </div>
           </div>
         </div>
       </form>

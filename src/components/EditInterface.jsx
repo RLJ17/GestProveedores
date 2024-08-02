@@ -24,7 +24,6 @@ export default function EditInterface({ onClose, onSave, proveedor}) {
     try {
       const proveedorData = {
         ...newProveedor,
-        identificacionTributaria: parseInt(newProveedor.identificacionTributaria, 10),
         facturacionAnual: parseFloat(newProveedor.facturacionAnual),
         fechaUltimaEdicion: new Date().toISOString()
       };

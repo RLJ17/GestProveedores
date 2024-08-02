@@ -16,7 +16,6 @@ export default function Layout({ children }){
             </div>
             <div className="py-6 px-8">{ children }</div>
         </>
-        
     )
     
 }
